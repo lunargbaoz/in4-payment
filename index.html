@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin liên hệ & Thanh toán</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-section">
+                <div class="profile-avatar">
+                    <img src="" alt="Ảnh đại diện" id="profile-img" style="display: none;">
+                    <div class="avatar-placeholder" id="avatar-placeholder">
+                        <i class="fas fa-user"></i>
+                        <p>Thêm ảnh đại diện</p>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <h1>Thông tin liên hệ</h1>
+                    <div class="bio-section">
+                        <h2 class="profile-name" contenteditable="true">Tên của bạn</h2>
+                        <p class="profile-bio" contenteditable="true">Viết vài dòng giới thiệu về bản thân, công việc hoặc dịch vụ của bạn. Click để chỉnh sửa nội dung này.</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Tab Navigation -->
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="social">
+                <i class="fas fa-share-alt"></i>
+                Mạng xã hội
+            </button>
+            <button class="tab-btn" data-tab="payment">
+                <i class="fas fa-credit-card"></i>
+                Thông tin thanh toán
+            </button>
+        </nav>
+
+        <!-- Tab Content -->
+        <main class="tab-content">
+            <!-- Social Media Tab -->
+            <div id="social" class="tab-pane active">
+                <h2>Kết nối với chúng tôi</h2>
+                <div class="social-links">
+                    <a href="https://facebook.com/" target="_blank" class="social-link facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://instagram.com/" target="_blank" class="social-link instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://tiktok.com/" target="_blank" class="social-link tiktok">
+                        <i class="fab fa-tiktok"></i>
+                        <span>TikTok</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Payment Tab -->
+            <div id="payment" class="tab-pane">
+                <h2>Thông tin thanh toán</h2>
+                <div class="payment-methods">
+                    <!-- MB Bank -->
+                    <div class="payment-card">
+                        <div class="payment-header">
+                            <i class="fas fa-university"></i>
+                            <h3>MB Bank</h3>
+                        </div>
+                        <div class="payment-details">
+                            <div class="detail-row">
+                                <span class="label">Số tài khoản:</span>
+                                <span class="value">0987654321</span>
+                                <button class="copy-btn" onclick="copyToClipboard('0123456789')">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Chủ tài khoản:</span>
+                                <span class="value">NGUYEN VAN A</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vietcombank -->
+                    <div class="payment-card">
+                        <div class="payment-header">
+                            <i class="fas fa-university"></i>
+                            <h3>Vietcombank</h3>
+                        </div>
+                        <div class="payment-details">
+                            <div class="detail-row">
+                                <span class="label">Số tài khoản:</span>
+                                <span class="value">9876543210</span>
+                                <button class="copy-btn" onclick="copyToClipboard('9876543210')">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Chủ tài khoản:</span>
+                                <span class="value">NGUYEN VAN A</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Momo -->
+                    <div class="payment-card">
+                        <div class="payment-header">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Momo</h3>
+                        </div>
+                        <div class="payment-details">
+                            <div class="detail-row">
+                                <span class="label">Số điện thoại:</span>
+                                <span class="value">0901234567</span>
+                                <button class="copy-btn" onclick="copyToClipboard('0901234567')">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Tên tài khoản:</span>
+                                <span class="value">Nguyen Van A</span>
+                            </div>
+                        </div>
+                        <div class="qr-section">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                                <p>Mã QR Momo</p>
+                                <small>Quét mã để thanh toán</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ZaloPay -->
+                    <div class="payment-card">
+                        <div class="payment-header">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>ZaloPay</h3>
+                        </div>
+                        <div class="payment-details">
+                            <div class="detail-row">
+                                <span class="label">Số điện thoại:</span>
+                                <span class="value">0987654321</span>
+                                <button class="copy-btn" onclick="copyToClipboard('0901234567')">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Tên tài khoản:</span>
+                                <span class="value">Nguyen Van A</span>
+                            </div>
+                        </div>
+                        <div class="qr-section">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                                <p>Mã QR ZaloPay</p>
+                                <small>Quét mã để thanh toán</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Toast notification for copy feedback -->
+        <div id="toast" class="toast">
+            <i class="fas fa-check"></i>
+            Đã sao chép vào clipboard!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
